@@ -8,13 +8,14 @@ import javax.swing.JOptionPane;
 
 public class LogicaEje2 {
 
-    public static int alta(String[] nombre, int[] saldo, boolean[] moroso,
+    public static int alta(String[] nombre,int[] telefono, float[] saldo, boolean[] moroso,
             int n, int tam,
-            String nuevoNombre, int nuevoSaldo, boolean nuevoMoroso) {
+            String nuevoNombre,int nuevoTelf, float nuevoSaldo, boolean nuevoMoroso) {
 
         if (n == -1) {
             n++;
             nombre[n] = nuevoNombre;
+            telefono[n] =  nuevoTelf;
             saldo[n] = nuevoSaldo;
             moroso[n] = nuevoMoroso;
             JOptionPane.showMessageDialog(null, "Cliente agregado correctamente.");
@@ -30,11 +31,13 @@ public class LogicaEje2 {
                 pos = pos * (-1); 
                 for (int i = n; i >= pos + 1; i--) {
                     nombre[i] = nombre[i - 1];
+                    telefono[n] =  nuevoTelf;
                     saldo[i] = saldo[i - 1];
                     moroso[i] = moroso[i - 1];
                 }
 
                 nombre[pos] = nuevoNombre;
+                telefono[n] =  nuevoTelf;
                 saldo[pos] = nuevoSaldo;
                 moroso[pos] = nuevoMoroso;
 
@@ -47,7 +50,7 @@ public class LogicaEje2 {
         return n;
     }
 
-    public static int baja(String[] nombre, int[] saldo, boolean[] moroso,
+    public static int baja(String[] nombre ,int[] telefono, float[] saldo, boolean[] moroso,
             int n, String nomB) {
 
         if (n > -1) {
@@ -59,6 +62,7 @@ public class LogicaEje2 {
             } else {
                 for (int i = pos; i < n; i++) {
                     nombre[i] = nombre[i + 1];
+                    telefono[n] = telefono[i + 1];
                     saldo[i] = saldo[i + 1];
                     moroso[i] = moroso[i + 1];
                 }

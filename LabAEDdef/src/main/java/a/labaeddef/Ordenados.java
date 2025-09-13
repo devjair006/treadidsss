@@ -21,6 +21,7 @@ public class Ordenados extends javax.swing.JFrame {
      */
     public Ordenados() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -46,7 +47,7 @@ public class Ordenados extends javax.swing.JFrame {
         jLabel1.setText("ARRAY ORDENADO");
 
         E1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        E1.setForeground(new java.awt.Color(0, 0, 0));
+        E1.setForeground(new java.awt.Color(255, 255, 255));
         E1.setText("E1");
         E1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,7 +56,7 @@ public class Ordenados extends javax.swing.JFrame {
         });
 
         btnE2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        btnE2.setForeground(new java.awt.Color(0, 0, 0));
+        btnE2.setForeground(new java.awt.Color(255, 255, 255));
         btnE2.setText("E2");
         btnE2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +65,7 @@ public class Ordenados extends javax.swing.JFrame {
         });
 
         E3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        E3.setForeground(new java.awt.Color(0, 0, 0));
+        E3.setForeground(new java.awt.Color(255, 255, 255));
         E3.setText("E3");
         E3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

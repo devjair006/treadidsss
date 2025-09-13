@@ -5,6 +5,9 @@
 package a.labaeddef;
 
 import a.labaeddef.EjeDesordenados.Eje1Desorden.tamañoeje1;
+import a.labaeddef.EjeDesordenados.Eje2Desorden.tamañoeje2;
+import a.labaeddef.EjeDesordenados.Eje3Desordenado.tamañoeje3;
+import a.labaeddef.EjeOrdenados.Ejercicio6Orden.tamañoeje6;
 
 /**
  *
@@ -17,6 +20,7 @@ public class Desordenados extends javax.swing.JFrame {
      */
     public Desordenados() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -133,11 +137,16 @@ public class Desordenados extends javax.swing.JFrame {
     }//GEN-LAST:event_E1ActionPerformed
 
     private void E2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E2ActionPerformed
-        // TODO add your handling code here:
+       tamañoeje2 tam = new tamañoeje2();
+       tam.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_E2ActionPerformed
 
     private void E3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E3ActionPerformed
         // TODO add your handling code here:
+        tamañoeje3 tam = new tamañoeje3();
+       tam.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_E3ActionPerformed
 
     private void btnVolvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolvActionPerformed

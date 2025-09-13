@@ -4,6 +4,7 @@
  */
 package a.labaeddef.EjeOrdenados.Eje5Orden;
 
+import a.labaeddef.Vent2;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -28,6 +29,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
     
     public Ejercicio5(int tam) {
         initComponents();
+        setResizable(false);
         
         jprincipal.setVisible(false);
         this.tam = tam; // guarda la capacidad elegida
@@ -102,7 +104,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         NombreBEmpleado = new javax.swing.JTextField();
         exteBB = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jPaggextencion = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         txtDir = new javax.swing.JTextField();
@@ -256,7 +258,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Ejercicio 2 ordenados");
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jahir\\Downloads\\boton-de-informacion (1).png")); // NOI18N
+        jButton3.setText("Info");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -264,8 +266,8 @@ public class Ejercicio5 extends javax.swing.JFrame {
         });
 
         jButton5.setBackground(new java.awt.Color(255, 51, 51));
-        jButton5.setForeground(new java.awt.Color(255, 51, 51));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\jahir\\Downloads\\salida-de-emergencia (1).png")); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Volver");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -292,44 +294,41 @@ public class Ejercicio5 extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(opc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(opc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(opc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(opc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(opc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(opc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(opc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(opc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                         .addComponent(jLabel11)))
-                .addGap(135, 135, 135))
+                .addGap(143, 143, 143))
         );
 
-        jprincipal.setBackground(new java.awt.Color(255, 255, 255));
-
-        jplistar.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel8.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Datos");
 
         jTable1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(102, 153, 255), null, new java.awt.Color(102, 153, 255)));
@@ -361,7 +360,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jLabel12.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Buscar a una extencion");
 
         NombreBEmpleado.addActionListener(new java.awt.event.ActionListener() {
@@ -408,10 +407,11 @@ public class Ejercicio5 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jahir\\Downloads\\cargando-flechas (1).png")); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setText("Recargar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
 
@@ -428,7 +428,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
                 .addGap(318, 318, 318)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jplistarLayout.setVerticalGroup(
@@ -441,7 +441,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
                         .addGap(45, 45, 45))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jplistarLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
@@ -449,14 +449,11 @@ public class Ejercicio5 extends javax.swing.JFrame {
                 .addContainerGap(143, Short.MAX_VALUE))
         );
 
-        jPaggextencion.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel13.setBackground(new java.awt.Color(0, 0, 0));
         jLabel13.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Ingrese la direccion");
 
-        txtDir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255)));
         txtDir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDirActionPerformed(evt);
@@ -465,23 +462,21 @@ public class Ejercicio5 extends javax.swing.JFrame {
 
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
         jLabel14.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Ingrese la extencion(M²)");
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
         jLabel15.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Formulario");
 
-        txtPrecio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255)));
         txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPrecioActionPerformed(evt);
             }
         });
 
-        txtExt.setForeground(new java.awt.Color(0, 0, 0));
-        txtExt.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255), new java.awt.Color(102, 153, 255)));
+        txtExt.setForeground(new java.awt.Color(255, 255, 255));
         txtExt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtExtActionPerformed(evt);
@@ -490,7 +485,6 @@ public class Ejercicio5 extends javax.swing.JFrame {
 
         btnAlta.setBackground(new java.awt.Color(102, 153, 255));
         btnAlta.setText("Enviar formulario");
-        btnAlta.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
         btnAlta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAltaActionPerformed(evt);
@@ -499,7 +493,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
 
         jLabel18.setBackground(new java.awt.Color(0, 0, 0));
         jLabel18.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Precio");
 
         javax.swing.GroupLayout jPaggextencionLayout = new javax.swing.GroupLayout(jPaggextencion);
@@ -554,11 +548,9 @@ public class Ejercicio5 extends javax.swing.JFrame {
                 .addGap(177, 177, 177))
         );
 
-        jPdardebaja.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingrese la extencion del departamento a eliminar");
 
         txtDarBaja.addActionListener(new java.awt.event.ActionListener() {
@@ -569,7 +561,7 @@ public class Ejercicio5 extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 102, 102));
         jLabel6.setText("Advertencia: no se podran recuperar los datos una vez siendo eliminados");
 
         btnBaja.setBackground(new java.awt.Color(102, 153, 255));
@@ -590,13 +582,13 @@ public class Ejercicio5 extends javax.swing.JFrame {
                         .addGap(204, 204, 204)
                         .addComponent(txtDarBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPdardebajaLayout.createSequentialGroup()
-                        .addGap(313, 313, 313)
-                        .addComponent(btnBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPdardebajaLayout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addGroup(jPdardebajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPdardebajaLayout.createSequentialGroup()
+                        .addGap(295, 295, 295)
+                        .addComponent(btnBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(115, Short.MAX_VALUE))
         );
         jPdardebajaLayout.setVerticalGroup(
@@ -606,17 +598,17 @@ public class Ejercicio5 extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtDarBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(btnBaja)
-                .addGap(119, 119, 119)
+                .addGap(18, 18, 18)
+                .addComponent(btnBaja, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(108, 108, 108)
                 .addComponent(jLabel6)
                 .addContainerGap(244, Short.MAX_VALUE))
         );
 
-        jpmodifficar.setBackground(new java.awt.Color(255, 255, 255));
+        jpmodifficar.setForeground(new java.awt.Color(60, 63, 65));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ingrese la superficie del departamento a modificar");
 
         txtNewExt.addActionListener(new java.awt.event.ActionListener() {
@@ -625,10 +617,8 @@ public class Ejercicio5 extends javax.swing.JFrame {
             }
         });
 
-        cambiarName.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel9.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Cambiar precio del departamento");
 
         txtNewPrecio.addActionListener(new java.awt.event.ActionListener() {
@@ -820,27 +810,6 @@ public class Ejercicio5 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_opc2MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null,"5. Una inmobiliaria necesita almacenar la siguiente información sobre los departamentos\r\n" + //
-                        "rentados que se encuentran ordenados ascendentemente por la extensión del\r\n" + //
-                        "departamento:\r\n" + //
-                        " Ubicación del departamento (dirección)\r\n" + //
-                        " Extensión del departamento (superficie en metros cuadrados de cada departamento)\r\n" + //
-                        " Precio\r\n" + //
-                        "Escriba un programa que pueda llevar a cabo las siguientes operaciones.\r\n" + //
-                        "1. Dar de alta a un departamento.\r\n" + //
-                        "2. Dar de baja al departamento.\r\n" + //
-                        "3. Modificar el precio de un departamento por medio de la superficie dada.\r\n" + //
-                        "4. Listar los datos de un departamento determinado.\r\n" + //
-                        "5. Listar los datos de todos los registros.\r\n" + //
-                        "6. Salir");
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable1MouseClicked
@@ -982,9 +951,23 @@ public class Ejercicio5 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDirActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       mostrarDep();    // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        mostrarDep();    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Una compañia necesita almacenar en arreglos la siguiente \n"
+            + " informacion de cada uno de sus empleados ordenados alfabeticamente:\n"
+            + "Edad,Direccion,Sexo,Edad,Anos de antiguedad\n"
+            + "1. Escribir un programa que pueda listar los datos de los empleados \n2.dar de alta a un empleado\n3. Dar de alta a un empleado\n4.Modificar los datos de un empleado\n5.Listar los datos de un empleado en especifico");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         Vent2 menu = new Vent2();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1029,10 +1012,10 @@ public class Ejercicio5 extends javax.swing.JFrame {
     private javax.swing.JButton btnBaja;
     private javax.swing.JPanel cambiarName;
     private javax.swing.JButton exteBB;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

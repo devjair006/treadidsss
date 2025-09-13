@@ -18,6 +18,7 @@ public class Vent2 extends javax.swing.JFrame {
      */
     public Vent2() {
         initComponents();
+        setResizable(false);
     }
 
     /**

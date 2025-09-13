@@ -4,7 +4,6 @@
  */
 package a.labaeddef.EjeDesordenados.Eje1Desorden;
 
-
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +17,7 @@ public class tamañoeje1 extends javax.swing.JFrame {
      */
     public tamañoeje1() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -128,15 +128,24 @@ public class tamañoeje1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-
-        if (txtTamArray.getText().isEmpty()) {
+        try{
+            if (txtTamArray.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor ingrese el tamaño del arreglo");
+        } else if (Integer.parseInt(txtTamArray.getText()) <= 0) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un tam valido");
         } else {
+
             Ejercicio1 pantallaPrin = new Ejercicio1(Integer.parseInt(txtTamArray.getText()));
+
             pantallaPrin.setVisible(true);
             pantallaPrin.setLocationRelativeTo(null);
+            setResizable(false);
             this.dispose();
         }
+        }catch(NumberFormatException e){
+             JOptionPane.showMessageDialog(null, "Por favor ingrese un tam valido");
+        }
+        
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     private void txtTamArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTamArrayActionPerformed
@@ -157,7 +166,7 @@ public class tamañoeje1 extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        /*try {
+ /*try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());

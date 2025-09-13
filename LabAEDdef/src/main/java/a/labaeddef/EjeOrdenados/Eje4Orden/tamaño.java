@@ -17,6 +17,7 @@ public class tamaño extends javax.swing.JFrame {
      */
     public tamaño() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -127,15 +128,22 @@ public class tamaño extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-
-        if (txtTamArray.getText().isEmpty()) {
+        try{
+            if (txtTamArray.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor ingrese el tamaño del arreglo");
-        } else {
+        }else if (Integer.parseInt(txtTamArray.getText()) <= 0) {
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un tam valido");
+        } 
+        else {
             Ejercicio4 pantallaPrin = new Ejercicio4(Integer.parseInt(txtTamArray.getText()));
             pantallaPrin.setVisible(true);
             pantallaPrin.setLocationRelativeTo(null);
             this.dispose();
         }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Por favor ingrese un tam valido");
+        }
+        
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     private void txtTamArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTamArrayActionPerformed

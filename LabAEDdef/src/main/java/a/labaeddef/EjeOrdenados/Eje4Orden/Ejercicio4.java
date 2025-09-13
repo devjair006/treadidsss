@@ -4,6 +4,7 @@
  */
 package a.labaeddef.EjeOrdenados.Eje4Orden;
 
+import a.labaeddef.Vent2;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -30,6 +31,7 @@ public class Ejercicio4 extends javax.swing.JFrame {
     
     public Ejercicio4(int tam) {
         initComponents();
+        setResizable(false);
         jprincipal.setVisible(false);
         
         modeloTabla = new DefaultTableModel(
@@ -93,13 +95,13 @@ jTable1.setModel(modeloTabla);
         jLabel12 = new javax.swing.JLabel();
         NombreBEmpleado = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jPaggempleado = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         nombreNuevo5 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        nombreNuevo7 = new javax.swing.JTextField();
         nombreNuevo8 = new javax.swing.JTextField();
         nombreNuevo9 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
@@ -107,6 +109,7 @@ jTable1.setModel(modeloTabla);
         jLabel18 = new javax.swing.JLabel();
         nombreNuevo10 = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
+        sexoooooo = new javax.swing.JComboBox<>();
         jPdardebaja = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -250,7 +253,7 @@ jTable1.setModel(modeloTabla);
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Ejercicio 1 ordenados");
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jahir\\Downloads\\boton-de-informacion (1).png")); // NOI18N
+        jButton3.setText("info");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -258,8 +261,8 @@ jTable1.setModel(modeloTabla);
         });
 
         jButton5.setBackground(new java.awt.Color(255, 51, 51));
-        jButton5.setForeground(new java.awt.Color(255, 51, 51));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\jahir\\Downloads\\salida-de-emergencia (1).png")); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Volver");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -286,40 +289,41 @@ jTable1.setModel(modeloTabla);
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(opc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(opc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(opc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(opc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(opc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(opc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(opc3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(opc4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                         .addComponent(jLabel11)))
-                .addGap(135, 135, 135))
+                .addGap(143, 143, 143))
         );
 
         jLabel8.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Informacion de empleados registrados");
 
         jTable1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(102, 153, 255), null, new java.awt.Color(102, 153, 255)));
@@ -351,7 +355,7 @@ jTable1.setModel(modeloTabla);
         jScrollPane1.setViewportView(jTable1);
 
         jLabel12.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Buscar a un empleado");
 
         NombreBEmpleado.addActionListener(new java.awt.event.ActionListener() {
@@ -397,27 +401,42 @@ jTable1.setModel(modeloTabla);
                 .addContainerGap())
         );
 
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setText("Recargar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jplistarLayout = new javax.swing.GroupLayout(jplistar);
         jplistar.setLayout(jplistarLayout);
         jplistarLayout.setHorizontalGroup(
             jplistarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jplistarLayout.createSequentialGroup()
-                .addGroup(jplistarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jplistarLayout.createSequentialGroup()
-                        .addGap(176, 176, 176)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jplistarLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(36, 36, 36)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jplistarLayout.createSequentialGroup()
+                .addGap(176, 176, 176)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jplistarLayout.setVerticalGroup(
             jplistarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jplistarLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jLabel8)
-                .addGap(31, 31, 31)
+                .addGroup(jplistarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jplistarLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(jLabel8)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jplistarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -438,7 +457,7 @@ jTable1.setModel(modeloTabla);
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
         jLabel14.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Ingrese la direcció del usuario");
+        jLabel14.setText("Ingrese la dirección del usuario");
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
         jLabel15.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
@@ -450,13 +469,7 @@ jTable1.setModel(modeloTabla);
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText(" Años de antiguedad del usuario");
 
-        nombreNuevo7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreNuevo7ActionPerformed(evt);
-            }
-        });
-
-        nombreNuevo8.setForeground(new java.awt.Color(0, 0, 0));
+        nombreNuevo8.setForeground(new java.awt.Color(255, 255, 255));
         nombreNuevo8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreNuevo8ActionPerformed(evt);
@@ -493,6 +506,13 @@ jTable1.setModel(modeloTabla);
             }
         });
 
+        sexoooooo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
+        sexoooooo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sexooooooActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPaggempleadoLayout = new javax.swing.GroupLayout(jPaggempleado);
         jPaggempleado.setLayout(jPaggempleadoLayout);
         jPaggempleadoLayout.setHorizontalGroup(
@@ -517,11 +537,11 @@ jTable1.setModel(modeloTabla);
                                 .addGroup(jPaggempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(nombreNuevo8, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(nombreNuevo5, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nombreNuevo7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPaggempleadoLayout.createSequentialGroup()
                                         .addComponent(nombreNuevo10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(100, 100, 100)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(sexoooooo, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPaggempleadoLayout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addGap(33, 33, 33)
@@ -548,11 +568,15 @@ jTable1.setModel(modeloTabla);
                 .addGroup(jPaggempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaggempleadoLayout.createSequentialGroup()
                         .addComponent(nombreNuevo8, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addGroup(jPaggempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nombreNuevo7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPaggempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPaggempleadoLayout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaggempleadoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sexoooooo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(jPaggempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nombreNuevo10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17)
@@ -569,7 +593,7 @@ jTable1.setModel(modeloTabla);
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ingrese el nombre del usuario a eliminar");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -627,7 +651,7 @@ jTable1.setModel(modeloTabla);
         );
 
         jLabel7.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ingrese el nombre del usuario a modificar");
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -637,7 +661,7 @@ jTable1.setModel(modeloTabla);
         });
 
         jLabel9.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Cambiar años de antiguedad");
 
         añosanti.addActionListener(new java.awt.event.ActionListener() {
@@ -830,18 +854,6 @@ jTable1.setModel(modeloTabla);
         // TODO add your handling code here:
     }//GEN-LAST:event_opc2MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Una compañia necesita almacenar en arreglos la siguiente \n"
-            + " informacion de cada uno de sus empleados ordenados alfabeticamente:\n"
-            + "Edad,Direccion,Sexo,Edad,Anos de antiguedad\n"
-            + "1. Escribir un programa que pueda listar los datos de los empleados \n2.dar de alta a un empleado\n3. Dar de alta a un empleado\n4.Modificar los datos de un empleado\n5.Listar los datos de un empleado en especifico");
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable1MouseClicked
@@ -882,10 +894,6 @@ jTable1.setModel(modeloTabla);
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreNuevo5ActionPerformed
 
-    private void nombreNuevo7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreNuevo7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreNuevo7ActionPerformed
-
     private void nombreNuevo8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreNuevo8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreNuevo8ActionPerformed
@@ -898,15 +906,17 @@ jTable1.setModel(modeloTabla);
 
         try {
 
-            if(nombreNuevo5.getText().isEmpty() ||nombreNuevo8.getText().isEmpty()||nombreNuevo7.getText().isEmpty()){
+            if(nombreNuevo5.getText().isEmpty() ||nombreNuevo8.getText().isEmpty()){
 
                 JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
 
             }else{
+                
+                String seleccion = (String) sexoooooo.getSelectedItem();
                 String nuevoNombre = nombreNuevo5.getText();
                 String nuevaDireccion = nombreNuevo8.getText();
                 int nuevaEdad = Integer.parseInt(nombreNuevo10.getText());
-                String nuevoSexo =nombreNuevo7.getText();
+                String nuevoSexo =seleccion;
                 int nuevaAntiguedad = Integer.parseInt(nombreNuevo9.getText());
 
                 // llamada a logicaeje4
@@ -918,7 +928,7 @@ jTable1.setModel(modeloTabla);
                 // limpiar campos
                 nombreNuevo5.setText("");
                 nombreNuevo8.setText("");
-                nombreNuevo7.setText("");
+                
                 nombreNuevo9.setText("");
                 nombreNuevo10.setText("");
             }
@@ -996,6 +1006,28 @@ jTable1.setModel(modeloTabla);
         cambiarName.setVisible(true); // Mostrar panel para cambiar antigüedad
     }//GEN-LAST:event_BuscarModiActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        mostrarEmpleados();    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Una compañia necesita almacenar en arreglos la siguiente \n"
+            + " informacion de cada uno de sus empleados ordenados alfabeticamente:\n"
+            + "Edad,Direccion,Sexo,Edad,Anos de antiguedad\n"
+            + "1. Escribir un programa que pueda listar los datos de los empleados \n2.dar de alta a un empleado\n3. Dar de alta a un empleado\n4.Modificar los datos de un empleado\n5.Listar los datos de un empleado en especifico");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         Vent2 menu = new Vent2();
+        menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void sexooooooActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexooooooActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sexooooooActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1043,6 +1075,7 @@ jTable1.setModel(modeloTabla);
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1076,12 +1109,12 @@ jTable1.setModel(modeloTabla);
     private javax.swing.JPanel jprincipal;
     private javax.swing.JTextField nombreNuevo10;
     private javax.swing.JTextField nombreNuevo5;
-    private javax.swing.JTextField nombreNuevo7;
     private javax.swing.JTextField nombreNuevo8;
     private javax.swing.JTextField nombreNuevo9;
     private javax.swing.JPanel opc1;
     private javax.swing.JPanel opc2;
     private javax.swing.JPanel opc3;
     private javax.swing.JPanel opc4;
+    private javax.swing.JComboBox<String> sexoooooo;
     // End of variables declaration//GEN-END:variables
 }
